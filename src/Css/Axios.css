@@ -1,0 +1,48 @@
+
+*{
+    background-color: aqua;
+}
+
+.product{
+    justify-content: center;
+    background-color: blue;
+    li{
+        text-align: justify;
+        font-size:18px;
+        font-weight: bold;
+        margin: 50px;
+    }
+
+    li:hover{
+        color: red;
+        cursor: pointer;
+    }
+    
+}
+
+/* mobile view Response Starting */
+
+@media screen and (max-width: 570px) {
+    
+    
+.product{
+    justify-content: center;
+    background-color: blue;
+    li{
+        text-align: justify;
+        font-size:18px;
+        font-weight: bold;
+        margin: 50px;
+        line-height: 2;
+        padding: 20px;
+    }
+
+    li:hover{
+        color: red;
+        cursor: pointer;
+       
+    }
+    
+}
+
+}
