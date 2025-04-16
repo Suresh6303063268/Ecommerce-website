@@ -20,20 +20,21 @@
   }
   
   .product-card {
-    border: 1px solid #ddd;
+    border: 1px solid #c8d5ef;
     border-radius: 8px;
     padding: 15px;
     margin: 10px;
+    height:auto;
     width:280px;
     cursor: pointer;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 5px 20px 10px rgba(0,0,0,0.1);
     text-align: center;
   }
   
   .product-card img {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 300px;
+    object-fit:fill;
     filter: brightness(120%);
   }
   
@@ -45,12 +46,178 @@
   }
 
   .product-card p{
-    color: rgb(180, 158, 49);
+    color: rgb(17, 20, 241);
     font-size: 20px;
     text-align: center;
     font-weight: 900;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
+
+  .product-card h4{
+    color:rgb(255, 0, 195);
+    font-size: 20px;
+    text-align: center;
+    font-weight: 900;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+
+  .filter-input{
+    width: 300px;
+    padding: 15px;
+  }
+
+.handleinput{
+  width: 200px;
+  height: 50px;
+  background-color: red;
+  cursor: pointer;
+  color: white;
+  font-size:15px;
+  font-weight: bold;
+}
+
+.handleinput:hover{
+  background-color: yellow;
+  color: rgb(57, 44, 44);
+  font-size:15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.save-button{
+  margin-right: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width:100px;
+  height: 40px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: rgb(106, 255, 0);
+}
+
+.save-button:hover{
+  background-color: rgb(98, 237, 34);
+  color: white;
+}
+
+
+
+
+
+
+.delete-button{
+  margin-right: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width:100px;
+  height:40px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: red;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+}
+
+.delete-button:hover{
+  background-color: rgb(237, 34, 85);
+  color: white;
+}
+
+
+
+
+.edit-button{
+  margin-right: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width:100px;
+  height:40px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgb(34, 0, 255);
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+.edit-button:hover{
+  background-color: rgb(34, 112, 237);
+  color: white;
+}
+
+
+
+.add-product-form {
+  display: flex;
+  margin-top: 30px;
+  flex-direction: column;
+  width:550px;
+  justify-content: center !important;
+  margin-left:480px;
+ border-radius: 20px;
+ box-shadow: 5px 0px 5px red;
+  gap: 10px;
+}
+
+.add-product-form input {
+  padding: 10px;
+  margin: 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1.5px solid #ccc;
+}
+
+.add-product-form button {
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  margin: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-product-form button[type="button"] {
+  background-color: #dc3545;
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 400px;
+  color: #ff0026;
+}
+
+.css-1c5o7vy-MuiPagination-ul{
+  background-color: red;
+}
+.MuiPaginationItem-root {
+  color: red;
+}
+
+.MuiPaginationItem-ellipsis {
+  color: #aaa;
+}
+
+.MuiPaginationItem-root.Mui-selected {
+  background-color: red;
+  color: white;
+}
+
 
   
 @media screen and (max-width: 570px) {
@@ -62,6 +229,7 @@
         h1{
             color: rgb(244, 58, 86);
             font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
         }
       }
       
@@ -92,7 +260,7 @@
       
       .product-card img {
         width: 100%;
-        height: auto;
+        height: 300px;
         object-fit: contain;
         filter: brightness(120%);
       }
@@ -105,14 +273,122 @@
       }
     
       .product-card p{
-        color: rgb(180, 158, 49);
+        color:yellow;
         font-size: 20px;
         text-align: center;
         font-weight: 900;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       }
     
+      .product-card h4{
+        color:rgb(255, 0, 98);
+        font-size: 20px;
+        text-align: center;
+        font-weight: 900;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+    
+
+
+
+      .filter-input{
+        width: 150px;
+        padding: 15px;
+      }
       
+.handleinput{
+  width:150px;
+  height: 50px;
+  background-color: red;
+  cursor: pointer;
+  color: white;
+  font-size:15px;
+  font-weight: bold;
+}
+
+.handleinput:hover{
+  background-color: yellow;
+  color: rgb(57, 44, 44);
+  font-size:15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.save-button{
+  margin-right: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width:100px;
+  height: 40px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: rgb(106, 255, 0);
+}
+
+.save-button:hover{
+  background-color: rgb(98, 237, 34);
+  color: white;
+}
+
+
+
+
+
+
+.delete-button{
+  margin-right: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width:100px;
+  height:40px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: red;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+}
+
+.delete-button:hover{
+  background-color: rgb(237, 34, 85);
+  color: white;
+}
+
+
+
+
+.edit-button{
+  margin-right: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width:100px;
+  height:40px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgb(34, 0, 255);
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+.edit-button:hover{
+  background-color: rgb(34, 112, 237);
+  color: white;
+}
+
+
+  
    
     
     }

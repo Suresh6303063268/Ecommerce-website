@@ -16,10 +16,12 @@ function App() {
       <h1>Product List</h1>
       <div className="product-container">
         {products.map(product => (
-          <div key={product.category} className="product-card">
+          <div key={product.id} className="product-card"> 
+        
+           
             <img src={product.image} alt={product.title} />
-            <p>Catagorey {product.category
-            }</p>
+            <p>Catagorey {product.category}
+            </p>
             <h3>Title : &{product.title}</h3>
           
                         <p><strong>Price:</strong> ${product.price}</p>
