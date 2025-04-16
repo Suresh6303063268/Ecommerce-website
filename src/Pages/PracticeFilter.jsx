@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../Css/product.css';
-import Pagination from '@mui/material/Pagination';
+
 
 function PracticeFilter() {
   const [data, setData] = useState([]);
@@ -19,9 +19,7 @@ function PracticeFilter() {
     });
 
 
- const [currentPage, setCurrentPage] = useState(1);
-  const [productsPerPage] = useState(4);
-
+ 
 
 
   // Fetch product data
@@ -79,16 +77,6 @@ function PracticeFilter() {
   };
 
 
-
-// Calculate the products to display based on the current page
-const indexOfLastProduct = currentPage * productsPerPage;
-const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-const currentProducts = filteredData.slice(indexOfFirstProduct, indexOfLastProduct);
-
-// Handle page change
-const handlePageChange = (event, value) => {
-  setCurrentPage(value);
-};
 
 // Handle Add Product
 const handleAddProduct = (e) => {
@@ -188,10 +176,10 @@ const handleNewProductChange = (e) => {
         )}
   
         <div className="product-container">
-          {currentProducts.length === 0 ? (
+          {filteredData.length === 0 ? (
             <p>No products found.</p>
           ) : (
-            currentProducts.map(product => (
+            filteredData.map(product => (
               <div key={product.id} className="product-card">
                 <p>Category: 
                   {editingId === product.id ? (
@@ -258,13 +246,7 @@ const handleNewProductChange = (e) => {
         </div>
   
        
-   <Pagination
-          count={Math.ceil(filteredData.length / productsPerPage)} 
-          page={4}
-          onChange={handlePageChange}
-          color="primary"
-          className="pagination"
-        />
+  
       </div>
     );
 }
